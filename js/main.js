@@ -1,6 +1,5 @@
 (function(){
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var fmt=function(n){return '€'+Math.round(n).toLocaleString('en-US');};
 
   function countUp(el){
     var target=parseFloat(el.dataset.count),prefix=el.dataset.prefix||'';
@@ -21,61 +20,6 @@
     });
   },{threshold:.3});
   document.querySelectorAll('[data-count], #anoms, #steps, .reveal').forEach(function(el){io.observe(el);});
-
-  // theme switcher
-  var btns=document.querySelectorAll('.switcher button');
-  btns.forEach(function(b){b.addEventListener('click',function(){
-    document.documentElement.setAttribute('data-theme', b.dataset.theme);
-    btns.forEach(function(x){x.setAttribute('aria-pressed', x===b?'true':'false');});
-  });});
-
-  // savings calculator
-  var slider=document.getElementById('spend'),
-      spendVal=document.getElementById('spendVal'),
-      saveVal=document.getElementById('saveVal'),
-      saveRange=document.getElementById('saveRange'),
-      saveBar=document.getElementById('saveBar');
-  function paintTrack(){
-    var pct=(slider.value-slider.min)/(slider.max-slider.min)*100;
-    slider.style.background='linear-gradient(90deg,#8B6DFF,#2FD9C4 '+pct+'%,rgba(255,255,255,.09) '+pct+'%)';
-  }
-  var curMid=0, animId=null;
-  function setSavings(animate){
-    var spend=+slider.value;
-    spendVal.textContent=(spend>=20000000?'€20,000,000+':fmt(spend));
-    var mid=spend*0.055, low=spend*0.03, high=spend*0.08;
-    saveRange.textContent='Estimated range: '+fmt(low)+' – '+fmt(high);
-    saveBar.style.width=(38+(spend/slider.max)*54)+'%';
-    if(!animate||reduce){curMid=mid;saveVal.textContent=fmt(mid);return;}
-    var from=curMid,to=mid,st=null,dur=450;
-    if(animId)cancelAnimationFrame(animId);
-    function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/dur,1);var e=1-Math.pow(1-p,3);
-      saveVal.textContent=fmt(from+(to-from)*e);if(p<1)animId=requestAnimationFrame(step);else curMid=to;}
-    animId=requestAnimationFrame(step);
-  }
-  if(slider){
-    paintTrack(); setSavings(false);
-    slider.addEventListener('input',function(){paintTrack();setSavings(true);});
-  }
-})();
-
-// nav dropdown ("Company") — click/keyboard toggle, closes on outside click or Escape
-(function(){
-  document.querySelectorAll('.nav-drop').forEach(function(drop){
-    var btn = drop.querySelector('.nav-drop-btn');
-    if(!btn) return;
-    function close(){ drop.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-    function toggle(e){
-      e.stopPropagation();
-      var willOpen = !drop.classList.contains('open');
-      document.querySelectorAll('.nav-drop.open').forEach(function(d){ if(d!==drop) d.classList.remove('open'); });
-      drop.classList.toggle('open', willOpen);
-      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-    }
-    btn.addEventListener('click', toggle);
-    document.addEventListener('click', function(e){ if(!drop.contains(e.target)) close(); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
-  });
 })();
 
 // book-a-demo form: AJAX submit to Formspree, no page reload
