@@ -1,0 +1,33 @@
+# CostWarden — robots.txt
+# TODO: once this is live, confirm the Sitemap URL below matches your real domain.
+
+User-agent: *
+Allow: /
+
+# Common AI assistant / answer-engine crawlers — explicitly allowed.
+# Remove any of these blocks if you'd rather that crawler not index the site.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://costwarden.co/sitemap.xml

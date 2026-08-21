@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="violet">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How CostWarden Works — AI Invoice Auditing, Step by Step</title>
+<meta name="description" content="See exactly how CostWarden reads your spend export, cross-checks every invoice against your contracts, and turns overpayments into a quantified, verifiable findings report.">
+<meta name="keywords" content="how invoice audit software works, AI spend analysis process, duplicate invoice detection, contract price compliance, accounts payable audit process">
+<link rel="canonical" href="https://costwarden.co/how-it-works/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="CostWarden">
+<meta name="theme-color" content="#0A0910">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CostWarden">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://costwarden.co/how-it-works/">
+<meta property="og:title" content="How CostWarden Works — AI Invoice Auditing, Step by Step">
+<meta property="og:description" content="From spend export to quantified findings report: how CostWarden catches overpayments, duplicates and price creep.">
+<meta property="og:image" content="https://costwarden.co/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CostWarden — Find the money hiding in your business">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How CostWarden Works — AI Invoice Auditing, Step by Step">
+<meta name="twitter:description" content="From spend export to quantified findings report: how CostWarden catches overpayments, duplicates and price creep.">
+<meta name="twitter:image" content="https://costwarden.co/assets/img/og-image.jpg">
+
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://costwarden.co/" },
+    { "@type": "ListItem", "position": 2, "name": "How it works", "item": "https://costwarden.co/how-it-works/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How CostWarden audits your spend for overcharges",
+  "description": "The five-step process CostWarden uses to turn a spend export into a quantified findings report.",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Upload", "text": "Send a spend export from your ERP or accounting system — no integration needed." },
+    { "@type": "HowToStep", "position": 2, "name": "Analyze", "text": "CostWarden reads every line: invoices, suppliers, contracts, prices, locations." },
+    { "@type": "HowToStep", "position": 3, "name": "Detect", "text": "The system surfaces price rises, duplicate payments, leakage and cross-supplier variance." },
+    { "@type": "HowToStep", "position": 4, "name": "Quantify", "text": "Each issue gets a euro figure, so you know what it's worth pursuing." },
+    { "@type": "HowToStep", "position": 5, "name": "Report", "text": "You receive a plain-English findings report showing what, where and how much." }
+  ]
+}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cw-mark" viewBox="0 0 44 44">
+    <defs><linearGradient id="cwg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B6DFF"/><stop offset="1" stop-color="#2FD9C4"/></linearGradient></defs>
+    <rect x="1" y="1" width="42" height="42" rx="13" fill="url(#cwg)"/>
+    <circle cx="19.5" cy="19.5" r="8.5" fill="none" stroke="#fff" stroke-width="3"/>
+    <path d="M26 26l6 6" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M16 21l2.5-3 2.5 2 3-4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a class="brand-lock" href="/" aria-label="CostWarden home">
+      <svg class="mark"><use href="#cw-mark"/></svg>
+      <span class="wm">CostWarden</span>
+    </a>
+    <div class="nav-links">
+      <a href="/how-it-works/">How it works</a>
+      <a href="/#calc">Calculator</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Company <span class="chev">⌄</span></button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="/about/" role="menuitem">About us</a>
+          <a href="/security/" role="menuitem">Security</a>
+          <a href="/contact/" role="menuitem">Contact</a>
+        </div>
+      </div>
+      <a href="/#faq">FAQ</a>
+      <a href="/#book-demo">Book a demo</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="signin">Sign in</a>
+      <a href="/#book-demo" class="btn btn-grad">Book a demo <span class="ar">↗</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><span class="cur">How it works</span></div>
+      <span class="pill"><span class="dot"></span>The full walkthrough</span>
+      <h1>No black box. Here's <span class="grad-text">exactly</span> what happens to your data.</h1>
+      <p class="lead">Five steps, in plain language — from the file you send us to the euro figure you can act on.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="prose">
+        <h2>1. Upload — a spend export, nothing else</h2>
+        <p>You send a standard spend export from whatever you already use — SAP, Oracle, NetSuite, or a plain spreadsheet pulled from your accounting system. There's no connector to install, no IT ticket, and no rip-and-replace of your existing tools. If you can export invoices, suppliers and (where you have them) contract rates, you can start.</p>
+
+        <h2>2. Analyze — every line, not a sample</h2>
+        <p>A manual audit typically samples a subset of invoices, because reading thousands of line items by hand doesn't scale. CostWarden reads every invoice, every supplier record and every contract rate in the export — so the smaller, easy-to-miss issues surface alongside the large ones.</p>
+
+        <h2>3. Detect — the patterns that actually cost you money</h2>
+        <p>The system cross-checks what you were billed against what you actually agreed to pay, and looks for patterns like:</p>
+        <ul>
+          <li><strong>Price creep</strong> — a supplier's price for the same item rising gradually, invoice over invoice.</li>
+          <li><strong>Duplicate payments</strong> — the same invoice paid more than once, often across different cost centers or locations.</li>
+          <li><strong>Off-contract billing</strong> — real invoiced prices drifting above the rate you signed up for.</li>
+          <li><strong>Cross-supplier variance</strong> — one supplier charging noticeably more than another for the exact same items.</li>
+        </ul>
+
+        <h2>4. Quantify — a euro figure for every finding</h2>
+        <p>Every issue CostWarden surfaces comes with an estimated euro impact, so your team can prioritize by size instead of digging through a wall of flagged rows to work out what matters.</p>
+
+        <h2>5. Report — traceable back to the source line</h2>
+        <p>You get a plain-English findings report. Every finding links back to the original invoice line it came from, so your finance and procurement team can verify each one before acting on it — nothing is presented as a black-box score you have to take on faith.</p>
+
+        <div class="legal-note">
+          <b>What's shipped today vs. what's coming.</b> Upload, Analyze, Detect, Quantify and Report are live in the Cost Control Assessment. Continuous monitoring, AI-generated fix recommendations, and guided recovery workflows are on the roadmap — see the <a href="/#how">product roadmap</a> on the homepage for status.
+        </div>
+
+        <h2>How long does it take?</h2>
+        <p>Most first assessments return findings within two weeks of receiving a usable spend export. There's no software to install on your side while that's happening, and no ongoing time commitment from your team beyond sending the export and reviewing the report.</p>
+
+        <h2>What if we don't have clean data?</h2>
+        <p>Most spend exports aren't clean, and that's expected. CostWarden is built to work with the export as it exists in your ERP or accounting system today — messy column names, inconsistent supplier naming and multiple locations included.</p>
+
+        <h2>Curious what a finding actually looks like?</h2>
+        <p>See a worked example — including the calculator, the before/after picture, and the anomalies CostWarden typically catches — on the <a href="/#calc">CostWarden homepage</a>, or jump straight to booking a free assessment below.</p>
+      </div>
+
+      <div style="text-align:center;margin-top:44px">
+        <a href="/#book-demo" class="btn btn-grad">Book a demo <span class="ar">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand-lock" href="/">
+          <svg class="mark" style="width:32px;height:32px"><use href="#cw-mark"/></svg>
+          <span class="wm">CostWarden</span>
+        </a>
+        <p>We find the money quietly leaking out of your business — and help you get it back.</p>
+      </div>
+      <div class="foot-col"><h4>Product</h4><a href="/how-it-works/">How it works</a><a href="/#calc">Savings calculator</a><a href="/security/">Security</a><a href="/#book-demo">Book a demo</a></div>
+      <div class="foot-col"><h4>Company</h4><a href="/about/">About</a><a href="/#faq">FAQ</a><a href="/contact/">Contact</a></div>
+      <div class="foot-col"><h4>Legal</h4><a href="/privacy-policy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/data-processing/">Data processing</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 CostWarden. All rights reserved.</span>
+      <span>Built for the global mid-market</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

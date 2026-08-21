@@ -1,0 +1,13 @@
+{
+  "name": "CostWarden",
+  "short_name": "CostWarden",
+  "description": "AI that finds overpayments, duplicate charges and quiet price rises hiding in your business spend.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0910",
+  "theme_color": "#0A0910",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

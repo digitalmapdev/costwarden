@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="violet">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Security & Data Handling — CostWarden</title>
+<meta name="description" content="How CostWarden handles your spend data: encryption, access control, data minimization, retention and deletion. Straight answers for finance and IT teams evaluating CostWarden.">
+<meta name="keywords" content="CostWarden security, invoice audit data security, spend data privacy, AI vendor security review, financial data handling">
+<link rel="canonical" href="https://costwarden.co/security/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="CostWarden">
+<meta name="theme-color" content="#0A0910">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CostWarden">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://costwarden.co/security/">
+<meta property="og:title" content="Security & Data Handling — CostWarden">
+<meta property="og:description" content="How CostWarden handles your spend data: encryption, access control, data minimization, retention and deletion.">
+<meta property="og:image" content="https://costwarden.co/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CostWarden — Find the money hiding in your business">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Security & Data Handling — CostWarden">
+<meta name="twitter:description" content="How CostWarden handles your spend data: encryption, access control, data minimization, retention and deletion.">
+<meta name="twitter:image" content="https://costwarden.co/assets/img/og-image.jpg">
+
+<link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://costwarden.co/" },
+    { "@type": "ListItem", "position": 2, "name": "Security", "item": "https://costwarden.co/security/" }
+  ]
+}
+</script>
+
+<!-- NOTE TO TEAM: this page intentionally avoids naming specific certifications
+     (SOC 2, ISO 27001, etc.) or a specific cloud region/subprocessor list, since
+     none of that was confirmed at time of writing. Replace the placeholders
+     below with real, verifiable specifics as soon as you have them — claiming
+     an unverified certification is a compliance and trust risk, not just a
+     copy problem. -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cw-mark" viewBox="0 0 44 44">
+    <defs><linearGradient id="cwg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B6DFF"/><stop offset="1" stop-color="#2FD9C4"/></linearGradient></defs>
+    <rect x="1" y="1" width="42" height="42" rx="13" fill="url(#cwg)"/>
+    <circle cx="19.5" cy="19.5" r="8.5" fill="none" stroke="#fff" stroke-width="3"/>
+    <path d="M26 26l6 6" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M16 21l2.5-3 2.5 2 3-4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<header>
+  <nav class="wrap">
+    <a class="brand-lock" href="/" aria-label="CostWarden home">
+      <svg class="mark"><use href="#cw-mark"/></svg>
+      <span class="wm">CostWarden</span>
+    </a>
+    <div class="nav-links">
+      <a href="/how-it-works/">How it works</a>
+      <a href="/#calc">Calculator</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Company <span class="chev">⌄</span></button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="/about/" role="menuitem">About us</a>
+          <a href="/security/" role="menuitem">Security</a>
+          <a href="/contact/" role="menuitem">Contact</a>
+        </div>
+      </div>
+      <a href="/#faq">FAQ</a>
+      <a href="/#book-demo">Book a demo</a>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="signin">Sign in</a>
+      <a href="/#book-demo" class="btn btn-grad">Book a demo <span class="ar">↗</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><span class="cur">Security</span></div>
+      <span class="pill"><span class="dot"></span>Built for your finance & IT review</span>
+      <h1>Your spend data, handled like the <span class="grad-text">sensitive data</span> it is.</h1>
+      <p class="lead">You're sending us invoices, supplier lists and contract rates. Here's exactly how that data is treated, end to end.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:20px">
+    <div class="wrap">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg></div>
+          <h3>Encryption in transit and at rest</h3>
+          <p>Spend exports are encrypted in transit and at rest for the duration they're stored and processed.</p>
+        </div>
+        <div class="info-card">
+          <div class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+          <h3>Least-privilege access</h3>
+          <p>Access to a customer's data is limited to the people directly working on that account's assessment — not the whole team by default.</p>
+        </div>
+        <div class="info-card">
+          <div class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Data minimization</h3>
+          <p>We ask for the fields the analysis actually needs — invoices, suppliers, contract rates. Nothing beyond that is required to run an assessment.</p>
+        </div>
+        <div class="info-card">
+          <div class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1018 0 9 9 0 00-18 0z"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Defined retention</h3>
+          <p>Spend data is retained only for as long as needed to deliver the assessment and any agreed follow-up work — see <a href="/data-processing/" style="color:var(--teal)">Data Processing</a> for specifics.</p>
+        </div>
+        <div class="info-card">
+          <div class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V8l-7-5-7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+          <h3>Deletion on request</h3>
+          <p>You can request deletion of your spend data at any time once it's no longer needed for active work — contact us and we'll confirm once it's done.</p>
+        </div>
+        <div class="info-card">
+          <div class="ii"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg></div>
+          <h3>No resale, no model training on your data</h3>
+          <p>Your invoices, suppliers and contract terms are used to deliver your assessment — not sold, and not used to train models for other customers.</p>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top:56px">
+        <h2>What we ask for — and what we don't</h2>
+        <p>Running a Cost Control Assessment needs a standard spend export: invoices, supplier records, and — where you have them — contract rates. We don't need admin access to your ERP, a live integration, or any data beyond what's in that export.</p>
+
+        <h2>Where your data lives</h2>
+        <p>Spend data is processed to produce your findings report and is not shared with third parties beyond the sub-processors needed to run the service. A full sub-processor list and hosting region details are available on request during a security review.</p>
+
+        <h2>Evaluating CostWarden for a vendor security review?</h2>
+        <p>Happy to fill out a security questionnaire, sign a mutual NDA, or set up a call with whoever runs procurement or IT security on your side. Reach out via the <a href="/contact/">contact page</a> and we'll get you what you need.</p>
+      </div>
+
+      <div style="text-align:center;margin-top:20px">
+        <a href="/#book-demo" class="btn btn-grad">Book a demo <span class="ar">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand-lock" href="/">
+          <svg class="mark" style="width:32px;height:32px"><use href="#cw-mark"/></svg>
+          <span class="wm">CostWarden</span>
+        </a>
+        <p>We find the money quietly leaking out of your business — and help you get it back.</p>
+      </div>
+      <div class="foot-col"><h4>Product</h4><a href="/how-it-works/">How it works</a><a href="/#calc">Savings calculator</a><a href="/security/">Security</a><a href="/#book-demo">Book a demo</a></div>
+      <div class="foot-col"><h4>Company</h4><a href="/about/">About</a><a href="/#faq">FAQ</a><a href="/contact/">Contact</a></div>
+      <div class="foot-col"><h4>Legal</h4><a href="/privacy-policy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="/data-processing/">Data processing</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 CostWarden. All rights reserved.</span>
+      <span>Built for the global mid-market</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

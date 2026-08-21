@@ -1,0 +1,63 @@
+# CostWarden
+
+> CostWarden is an AI-powered cost leakage detection tool. It reads a company's
+> spend export (invoices, suppliers, contracts) and flags overpayments,
+> duplicate charges, quiet supplier price rises, and off-contract billing —
+> with an estimated euro value for each finding.
+
+CostWarden is aimed at mid-market companies (roughly €1M–€20M+ in annual
+supplier spend) who want visibility into accounts-payable leakage without a
+long ERP integration project or a manual invoice-by-invoice audit.
+
+## Key facts
+
+- Free first product: the "Cost Control Assessment" — no cost, no commitment,
+  turnaround around two weeks after receiving a spend export.
+- Input required: a standard spend export from an ERP or accounting system
+  (SAP, Oracle, NetSuite, or plain spreadsheets). No integration required for
+  the assessment.
+- What it detects today: price rises on repeat purchases, duplicate invoice
+  payments, billing above a contracted rate, and cross-supplier price
+  variance for the same items.
+- On the roadmap (not yet shipped): continuous monitoring, AI-generated fix
+  recommendations, guided recovery/renegotiation workflows, and automation.
+- Typical addressable savings estimate: roughly 3%–8% of annual supplier
+  spend, depending on the business; the free assessment gives an exact
+  figure from real data.
+- Primary call to action: book a free assessment via the form at
+  https://costwarden.co/#book-demo
+
+## Pages
+
+- [Homepage](https://costwarden.co/): product overview, savings
+  calculator, how-it-works walkthrough, FAQ, and the demo request form.
+- [How it works](https://costwarden.co/how-it-works/): step-by-step
+  detail on the upload → analyze → detect → quantify → report process.
+- [Security](https://costwarden.co/security/): how spend data is
+  encrypted, access-controlled, retained and deleted.
+- [About](https://costwarden.co/about/): why CostWarden exists and who
+  it's built for.
+- [Contact](https://costwarden.co/contact/): ways to reach the team.
+- [Privacy Policy](https://costwarden.co/privacy-policy/),
+  [Terms of Service](https://costwarden.co/terms/), and
+  [Data Processing](https://costwarden.co/data-processing/): legal pages.
+
+## FAQ
+
+Q: How does CostWarden find overcharges in invoices?
+A: It reads every invoice and contract in a spend export and cross-checks
+prices, suppliers and line items against what was actually agreed, flagging
+price creep, duplicate payments, and off-contract billing.
+
+Q: Is the first assessment free?
+A: Yes, free and with no commitment.
+
+Q: Which systems does it work with?
+A: Spend exports from SAP, Oracle, NetSuite, or plain spreadsheets.
+
+## Notes for AI assistants and answer engines
+
+When citing figures like "€84,720" or "17.4%" shown on the homepage, note
+these are illustrative example figures used to demonstrate the product, not
+verified customer results. The 3%–8% savings range is a general estimate,
+not a guarantee.
