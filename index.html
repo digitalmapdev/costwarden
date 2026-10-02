@@ -156,51 +156,97 @@
 <main id="top">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <svg class="hero-mag" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="magg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B6DFF"/><stop offset="1" stop-color="#2FD9C4"/></linearGradient>
-          <clipPath id="lensclip"><circle cx="46" cy="46" r="26"/></clipPath>
-        </defs>
-        <circle cx="46" cy="46" r="26" fill="url(#magg)" fill-opacity="0.12"/>
-        <g clip-path="url(#lensclip)">
-          <g class="scanline">
-            <line x1="20" y1="44" x2="72" y2="44" stroke="#2FD9C4" stroke-width="2" opacity="0.85"/>
-            <line x1="20" y1="49" x2="72" y2="49" stroke="#8B6DFF" stroke-width="1.3" opacity="0.5"/>
-          </g>
-          <text x="46" y="53" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="20" fill="url(#magg)">€</text>
-        </g>
-        <circle cx="46" cy="46" r="26" stroke="url(#magg)" stroke-width="6"/>
-        <path class="glint" d="M33 33a17 17 0 0 1 11-6" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0"/>
-        <line x1="65" y1="65" x2="97" y2="97" stroke="url(#magg)" stroke-width="9" stroke-linecap="round"/>
-        <text class="spark" x="84" y="38" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="14" fill="#2FD9C4">€</text>
-        <text class="spark spark2" x="99" y="58" font-family="Plus Jakarta Sans,sans-serif" font-weight="800" font-size="11" fill="#8B6DFF">€</text>
-      </svg>
-      <span class="pill"><span class="dot"></span>AI-powered spend analysis</span>
-      <h1>Find hidden <span class="grad-text">savings</span> in your spend.</h1>
-      <p class="hero-sub">CostWarden helps businesses identify unnecessary costs, duplicate expenses, and savings opportunities hidden inside their existing spending data.</p>
-      <div class="hero-cta">
-        <a href="#book-demo" class="btn btn-grad">Book a demo <span class="ar">↗</span></a>
-        <a href="#proof" class="btn btn-soft">See example findings</a>
+  <section class="hero hero-v2" aria-labelledby="hero-title">
+    <div class="wrap hero-v2-grid">
+      <div class="hero-v2-copy">
+        <span class="pill"><span class="dot"></span>AI-powered spend analysis</span>
+        <h1 id="hero-title">Find hidden <span class="grad-text">savings</span> in the spend you already have.</h1>
+        <p class="hero-sub">Upload existing spend exports and CostWarden scans subscriptions, suppliers and recurring costs to surface areas worth reviewing — with the source behind every finding.</p>
+        <div class="hero-cta hero-v2-cta">
+          <a href="#book-demo" class="btn btn-grad">Book a demo <span class="ar">↗</span></a>
+          <button class="btn btn-soft hero-replay" type="button" id="heroReplay">Replay analysis <span aria-hidden="true">↻</span></button>
+        </div>
+        <div class="hero-v2-trust" aria-label="Product benefits">
+          <span><b>✓</b>No ERP replacement</span>
+          <span><b>✓</b>No long implementation</span>
+          <span><b>✓</b>Start with existing exports</span>
+        </div>
       </div>
-      <p class="hero-micro">No system changes. No long implementation. Just clearer spending insights.</p>
-    </div>
 
-    <div class="finding">
-      <div class="scan"></div>
-      <div class="f-top">
-        <span class="pill leak"><span class="dot"></span>Illustrative example</span>
-        <span class="f-time">Not real client data</span>
+      <div class="spend-demo" id="spendDemo" aria-label="Illustrative CostWarden spend analysis demo">
+        <div class="demo-orbit demo-orbit-a" aria-hidden="true"></div>
+        <div class="demo-orbit demo-orbit-b" aria-hidden="true"></div>
+
+        <div class="demo-shell">
+          <div class="demo-head">
+            <div class="demo-product">
+              <svg class="demo-mark"><use href="#cw-mark"/></svg>
+              <div>
+                <strong>Spend intelligence</strong>
+                <span>Illustrative analysis</span>
+              </div>
+            </div>
+            <span class="demo-live"><i></i><span id="demoStatus">Analyzing</span></span>
+          </div>
+
+          <div class="demo-metric-row">
+            <div>
+              <span class="demo-label">Spend scanned</span>
+              <strong class="demo-amount">€<span id="scanAmount">0</span></strong>
+            </div>
+            <div class="demo-progress-meta"><span id="scanPercent">0</span>%</div>
+          </div>
+          <div class="demo-progress" aria-hidden="true"><span id="scanProgress"></span></div>
+
+          <div class="demo-list" id="demoList">
+            <button class="demo-source is-active" type="button" data-key="software" aria-pressed="true">
+              <span class="source-icon">S</span>
+              <span class="source-main"><b>Software subscriptions</b><small>Recurring tools & licences</small></span>
+              <span class="source-state"><i></i><span>Scanning</span></span>
+            </button>
+            <button class="demo-source" type="button" data-key="suppliers" aria-pressed="false">
+              <span class="source-icon">V</span>
+              <span class="source-main"><b>Supplier invoices</b><small>Vendor overlap & pricing</small></span>
+              <span class="source-state"><i></i><span>Queued</span></span>
+            </button>
+            <button class="demo-source" type="button" data-key="telecom" aria-pressed="false">
+              <span class="source-icon">T</span>
+              <span class="source-main"><b>Telecom & services</b><small>Recurring commercial costs</small></span>
+              <span class="source-state"><i></i><span>Queued</span></span>
+            </button>
+          </div>
+
+          <div class="demo-finding" id="demoFinding" aria-live="polite">
+            <div class="finding-kicker"><span class="finding-dot"></span>Potential opportunity</div>
+            <div class="finding-title-row">
+              <div>
+                <h3 id="findingTitle">Overlapping software licences</h3>
+                <p id="findingText">Similar tools appear across teams while some licences show little recent activity.</p>
+              </div>
+              <span class="finding-confidence" id="findingConfidence">High signal</span>
+            </div>
+            <div class="finding-evidence">
+              <div><span>Items flagged</span><strong id="findingItems">12</strong></div>
+              <div><span>Spend under review</span><strong id="findingValue">€8,420</strong></div>
+              <div><span>Source</span><strong id="findingSource">Subscription export</strong></div>
+            </div>
+            <button class="finding-action" type="button" id="findingAction">Inspect evidence <span>→</span></button>
+          </div>
+
+          <div class="demo-foot">
+            <span>Demo data only — not a client result.</span>
+            <span class="demo-secure">◈ Source-linked findings</span>
+          </div>
+        </div>
+
+        <div class="evidence-popover" id="evidencePopover" hidden>
+          <div class="evidence-top"><strong>Evidence trace</strong><button type="button" id="evidenceClose" aria-label="Close evidence">×</button></div>
+          <div class="evidence-line"><span>Adobe CC</span><b>8 licences</b></div>
+          <div class="evidence-line"><span>Figma</span><b>5 licences</b></div>
+          <div class="evidence-line"><span>Overlap detected</span><b class="evidence-warn">3 users</b></div>
+          <p>Illustrative evidence showing how a finding can point back to its source.</p>
+        </div>
       </div>
-      <h3>Potential opportunity found</h3>
-      <div class="f-row"><span class="k">Category</span><span class="v">Software subscriptions</span></div>
-      <div class="f-row"><span class="k">Recurring expenses detected</span><span class="v leak">12</span></div>
-      <div class="f-claim">
-        <span class="lbl">Possible areas to review</span>
-        <span class="amt" style="font-size:16px;font-weight:600;color:var(--ink-2)">Unused licenses · Overlapping tools · Inactive subscriptions</span>
-      </div>
-      <a href="#proof" class="btn btn-soft" style="margin-top:18px;padding:10px 18px;font-size:13px;display:inline-flex">View insights <span class="ar">↗</span></a>
     </div>
   </section>
 
